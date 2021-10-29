@@ -1,3 +1,7 @@
+.video-section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
 .video-container {
     background-image: url(../../images/video-bg.jpg);
     background-repeat: no-repeat;

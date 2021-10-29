@@ -1,0 +1,15 @@
+.benefits-section {
+    padding: 80px 0;
+    padding-bottom: 0;
+}
+.icon-box {
+    text-align: center;
+}
+.icon-box svg {
+    color: #ef2853;
+    font-size: 40px;
+}
+.icon-box h2 {
+    font-size: 22px;
+    margin-top: 20px;
+}
