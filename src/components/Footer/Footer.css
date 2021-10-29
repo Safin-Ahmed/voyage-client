@@ -1,0 +1,49 @@
+.footer-top {
+    padding: 25px 0;
+    background-color: #383838;
+}
+.promotional-text p {
+    font-weight: 400;
+}
+.book-btn {
+    background-color: #e83f53;
+    border-color: #e83f53;
+}
+.book-btn:hover {
+    background-color: #fff;
+    color: #000;
+    border-color: #fff;
+}
+.main-footer {
+    background-color: #242625;
+    color: #fff;
+    padding: 50px 0;
+}
+.main-footer .nav-link {
+    padding: 0 !important;
+    color: #aebdbd;
+    font-size: 16px;
+}
+.last-column p {
+    color: #aebdbd;
+    font-size: 14px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.footer-logo{
+    width: 35%;
+}
+.social-links li{
+    margin-bottom: 15px;
+}
+.social-links li svg {
+    margin-right: 10px;
+}
+.social-links a {
+    margin-right: 15px;
+}
+.copyright-footer {
+    margin-top: 50px;
+    border-top: 1px solid #484848;
+    padding-top: 20px;
+}

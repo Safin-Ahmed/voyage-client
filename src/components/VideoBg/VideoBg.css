@@ -1,0 +1,11 @@
+.video-container {
+    background-image: url(../../images/video-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 50vh;
+}
+.play-icon {
+    font-size: 60px;
+    color: #fff;
+}
