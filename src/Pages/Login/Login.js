@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Col, Container, Form, Row, Button } from 'react-bootstrap';
 import { BsFacebook, BsGoogle, BsLinkedin, BsTwitter } from 'react-icons/bs';
+import { useHistory, useLocation } from 'react-router';
 import useAuth from '../../hooks/useAuth';
 import login from '../../images/login.jpg';
 import './Login.css';
@@ -8,7 +9,10 @@ import './Login.css';
 const Login = () => {
     const [isNew, setIsNew] = useState(false);
     const [error, setError] = useState('');
-    const { user, signInWithGoogle } = useAuth();
+    const { user, signInWithGoogle, setIsLoading } = useAuth();
+    const location = useLocation();
+    const history = useHistory();
+    const redirectUrl = location.state?.from || '/home';
     const handleCheckBox = e => {
         setIsNew(e.target.checked);
     }
@@ -16,7 +20,12 @@ const Login = () => {
         signInWithGoogle()
             .then(() => {
                 console.log(user);
+                history.push(redirectUrl);
             })
+            .finally(() => {
+                setIsLoading(false);
+            })
+
     }
     return (
         <div className="login-section py-5">

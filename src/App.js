@@ -8,6 +8,7 @@ import AddService from './Pages/AddService/AddService';
 import Order from './components/Order/Order';
 import Login from './Pages/Login/Login';
 import AuthProvider from './contexts/AuthProvider';
+import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -21,9 +22,9 @@ function App() {
           <Route path="/addPackage">
             <AddService></AddService>
           </Route>
-          <Route path="/order/:id">
+          <PrivateRoute path="/order/:id">
             <Order></Order>
-          </Route>
+          </PrivateRoute>
           <Route path="/login">
             <Login></Login>
           </Route>
