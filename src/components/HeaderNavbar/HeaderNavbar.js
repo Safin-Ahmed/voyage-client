@@ -23,7 +23,7 @@ const HeaderNavbar = () => {
                         <Nav className="align-items-center">
                             <h6 className="m-0">User Name</h6>
                             <Nav.Link as={Link} to="/contact">Profile Pic</Nav.Link>
-                            <Nav.Link as={Link} to="/contact">Login</Nav.Link>
+                            <Nav.Link as={Link} to="/login">Login</Nav.Link>
 
                         </Nav>
                     </Navbar.Collapse>
