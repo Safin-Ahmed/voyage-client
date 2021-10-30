@@ -12,4 +12,8 @@
 .play-icon {
     font-size: 60px;
     color: #fff;
+    transition: all 0.2s ease;
+}
+.play-icon:hover {
+    transform: scale(1.2);
 }

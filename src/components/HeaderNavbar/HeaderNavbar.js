@@ -17,7 +17,7 @@ const HeaderNavbar = () => {
                             <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
                             <Nav.Link as={Link} to="/contact">My Orders</Nav.Link>
                             <Nav.Link as={Link} to="/contact">Manage All Orders</Nav.Link>
-                            <Nav.Link as={Link} to="/contact">Add a Service</Nav.Link>
+                            <Nav.Link as={Link} to="/addPackage">Add a Package</Nav.Link>
 
                         </Nav>
                         <Nav className="align-items-center">
