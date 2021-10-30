@@ -3,11 +3,31 @@ import { Col, Container, Row } from 'react-bootstrap';
 import { useParams } from 'react-router';
 import { useForm } from "react-hook-form";
 import usePackage from '../../hooks/usePackage';
+import useAuth from '../../hooks/useAuth';
 import './Order.css';
 const Order = () => {
     const { id } = useParams();
     const { register, handleSubmit, reset } = useForm();
-    const onSubmit = data => console.log(data);
+    const { user } = useAuth();
+    const onSubmit = data => {
+        const { address, email, mobile, note, username } = data;
+        const productId = id;
+        const doc = { username, email, address, mobile, note, productId };
+        fetch('http://localhost:5000/orders', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(doc)
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.insertedId) {
+                    alert('Ordered Successfully');
+                    reset();
+                }
+            })
+    };
     const { singlePackage } = usePackage(id);
     const { serviceTitle, price, description, imgUrl } = singlePackage;
     console.log(singlePackage);
@@ -15,11 +35,11 @@ const Order = () => {
         <div className="order-section">
             <Container>
                 <h2 className="mb-3">Checkout</h2>
-                <Row>
+                <Row className="align-items-center">
                     <Col lg={8}>
                         <form onSubmit={handleSubmit(onSubmit)}>
-                            <input className="shadow mb-3" placeholder="User Name" {...register("username")} />
-                            <input className="shadow mb-3" placeholder="Email Address" {...register("email")} />
+                            <input value={user.displayName} className="shadow mb-3" placeholder="User Name" {...register("username")} />
+                            <input value={user.email} className="shadow mb-3" placeholder="Email Address" {...register("email")} />
                             <input className="shadow mb-3" type="number" placeholder="Mobile Number" {...register("mobile", { required: true })} />
                             <input className="shadow mb-3" placeholder="Your Address" {...register("address", { required: true })} />
                             <textarea className="shadow mb-3" placeholder="Extra Note" {...register("note")} />

@@ -17,7 +17,7 @@ const HeaderNavbar = () => {
                             <Nav.Link as={Link} to="/">Home</Nav.Link>
                             <Nav.Link as={Link} to="/tours">Tours</Nav.Link>
                             <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
-                            {user && <Nav.Link as={Link} to="/contact">My Orders</Nav.Link>}
+                            {user && <Nav.Link as={Link} to="/myOrder">My Orders</Nav.Link>}
                             {user && <Nav.Link as={Link} to="/contact">Manage All Orders</Nav.Link>}
                             {user && <Nav.Link as={Link} to="/addPackage">Add a Package</Nav.Link>}
 

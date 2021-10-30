@@ -9,6 +9,7 @@ import Order from './components/Order/Order';
 import Login from './Pages/Login/Login';
 import AuthProvider from './contexts/AuthProvider';
 import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
+import MyOrders from './Pages/MyOrders/MyOrders';
 
 function App() {
   return (
@@ -27,6 +28,9 @@ function App() {
           </PrivateRoute>
           <Route path="/login">
             <Login></Login>
+          </Route>
+          <Route path="/myOrder">
+            <MyOrders></MyOrders>
           </Route>
         </Switch>
         <Footer></Footer>
