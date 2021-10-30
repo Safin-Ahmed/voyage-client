@@ -1,14 +1,22 @@
 import React, { useState } from 'react';
 import { Col, Container, Form, Row, Button } from 'react-bootstrap';
 import { BsFacebook, BsGoogle, BsLinkedin, BsTwitter } from 'react-icons/bs';
+import useAuth from '../../hooks/useAuth';
 import login from '../../images/login.jpg';
 import './Login.css';
 
 const Login = () => {
     const [isNew, setIsNew] = useState(false);
     const [error, setError] = useState('');
+    const { user, signInWithGoogle } = useAuth();
     const handleCheckBox = e => {
         setIsNew(e.target.checked);
+    }
+    const handleGoogleSignIn = () => {
+        signInWithGoogle()
+            .then(() => {
+                console.log(user);
+            })
     }
     return (
         <div className="login-section py-5">
@@ -17,7 +25,7 @@ const Login = () => {
                     <Col lg={6}>
                         <h1 className="text-center primary-color">{isNew ? "Create Your Account" : "Login To Your Account"}</h1>
                         <div className="social-login text-center mt-4">
-                            <Button className="mx-2 py-1 px-2 primary-bg"><BsGoogle></BsGoogle></Button>
+                            <Button onClick={handleGoogleSignIn} className="mx-2 py-1 px-2 primary-bg"><BsGoogle></BsGoogle></Button>
                             <Button className="mx-2 py-1 px-2 primary-bg"><BsFacebook></BsFacebook></Button>
                             <Button className="mx-2 py-1 px-2 primary-bg"><BsTwitter></BsTwitter></Button>
                             <Button className="mx-2 py-1 px-2 primary-bg"><BsLinkedin></BsLinkedin></Button>

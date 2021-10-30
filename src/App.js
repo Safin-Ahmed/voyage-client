@@ -7,10 +7,11 @@ import Footer from './components/Footer/Footer';
 import AddService from './Pages/AddService/AddService';
 import Order from './components/Order/Order';
 import Login from './Pages/Login/Login';
+import AuthProvider from './contexts/AuthProvider';
 
 function App() {
   return (
-    <div>
+    <AuthProvider>
       <Router>
         <HeaderNavbar></HeaderNavbar>
         <Switch>
@@ -29,7 +30,7 @@ function App() {
         </Switch>
         <Footer></Footer>
       </Router>
-    </div>
+    </AuthProvider>
   );
 }
 
