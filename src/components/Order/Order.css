@@ -1,0 +1,39 @@
+.order-section {
+    padding: 70px 0;
+}
+.order-section form input, .order-section form textarea {
+    display: block;
+    width: 60%;
+    margin: 0;
+    border: none;
+    padding: 20px;
+
+}
+.order-section form input:focus-visible, .order-section form textarea:focus-visible {
+    outline-color: #e83f53 ;
+}
+.order-section form input[type='submit'] {
+    background: #e83f53;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+}
+p.price {
+    font-size: 18px;
+    font-weight: 500;
+}
+span.price-number {
+    color: #e83f53;
+    font-weight: 500;
+}
+.checkout-card {
+    padding-bottom: 30px;
+}
+.checkout-card img {
+    max-width: 100%;
+    width: 100%;
+    display: block;
+}
+.desc {
+    padding: 0 30px;
+}

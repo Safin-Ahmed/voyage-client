@@ -1,0 +1,7 @@
+.single-card {
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+.single-card:hover {
+    transform: translateY(-20px);
+}

@@ -5,6 +5,7 @@ import HeaderNavbar from './components/HeaderNavbar/HeaderNavbar';
 import Home from './Pages/Home/Home';
 import Footer from './components/Footer/Footer';
 import AddService from './Pages/AddService/AddService';
+import Order from './components/Order/Order';
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
           </Route>
           <Route path="/addPackage">
             <AddService></AddService>
+          </Route>
+          <Route path="/order/:id">
+            <Order></Order>
           </Route>
         </Switch>
         <Footer></Footer>

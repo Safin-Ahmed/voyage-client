@@ -1,12 +1,13 @@
 import React from 'react';
 import { Card, Col, Button } from 'react-bootstrap';
 import { VscStarFull } from "react-icons/vsc";
-
+import { Link } from 'react-router-dom';
+import './Package.css';
 const Package = (props) => {
-    const { serviceTitle, price, rating, imgUrl, description } = props.package;
+    const { serviceTitle, price, rating, imgUrl, description, _id } = props.package;
     return (
         <Col>
-            <Card>
+            <Card className="single-card">
                 <Card.Img variant="top" src={imgUrl} />
                 <Card.Body>
                     <div className="card-top d-flex justify-content-between">
@@ -24,7 +25,7 @@ const Package = (props) => {
                     <Card.Text>
                         {description.slice(0, 200)}
                     </Card.Text>
-                    <Button style={{ background: '#ef2853', border: '1px solid #ef2853' }}>Go somewhere</Button>
+                    <Button as={Link} to={`/order/${_id}`} style={{ background: '#ef2853', border: '1px solid #ef2853' }}>Book Now</Button>
                 </Card.Body>
             </Card>
         </Col>
