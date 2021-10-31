@@ -18,7 +18,7 @@ const AllOrder = ({ order, orders, setOrders }) => {
         }
     }
     const handleAccept = () => {
-        const url = `http://localhost:5000/orders?id=${orderId}`;
+        const url = `https://agile-ravine-60330.herokuapp.com/orders?id=${orderId}`;
         const confirmation = window.confirm('Are you sure you want to accept the order?');
         if (confirmation) {
             axios.put(url)
@@ -26,7 +26,7 @@ const AllOrder = ({ order, orders, setOrders }) => {
                     console.log(res);
                     if (res.data.modifiedCount) {
                         alert('Order Accepted');
-                        fetch('http://localhost:5000/orders')
+                        fetch('https://agile-ravine-60330.herokuapp.com/orders')
                             .then(res => res.json())
                             .then(data => {
                                 setOrders(data);

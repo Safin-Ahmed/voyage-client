@@ -8,7 +8,7 @@ const ManageOrders = () => {
     const { isLoading, setIsLoading } = useAuth();
     useEffect(() => {
         setIsLoading(true)
-        fetch('http://localhost:5000/orders')
+        fetch('https://agile-ravine-60330.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => {
                 setAllOrders(data);
