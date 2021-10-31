@@ -12,7 +12,7 @@ const Login = () => {
     const { user, signInWithGoogle, setIsLoading } = useAuth();
     const location = useLocation();
     const history = useHistory();
-    const redirectUrl = location.state?.from || '/home';
+    const redirectUrl = location.state?.from || '/';
     const handleCheckBox = e => {
         setIsNew(e.target.checked);
     }
