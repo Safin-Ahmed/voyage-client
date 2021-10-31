@@ -45,7 +45,7 @@ const AllOrder = ({ order, orders, setOrders }) => {
             <td data-label="Mobile">{mobile}</td>
             <td data-label="Package Name">{serviceTitle}</td>
             {
-                status === "Pending" ? <td className="status" data-label="Status"><p className="primary-bg text-white">{status}</p></td> : status === "Cancelled" ? <td className="status" data-label="Status"><p className="bg-danger text-white">{status}</p></td> : <td className="status" data-label="Status"><p className="bg-success text-white">{status}</p></td>
+                status === "Pending" ? <td className="status" data-label="Status"><p className="bg-primary text-white">{status}</p></td> : status === "Cancelled" ? <td className="status" data-label="Status"><p className="bg-secondary text-white">{status}</p></td> : <td className="status" data-label="Status"><p className="bg-success text-white">{status}</p></td>
             }
             <td data-label="Action"><button onClick={handleDelete} className="btn btn-danger text-white cancel-btn me-3">Decline</button><button onClick={() => handleAccept('Approved')} className="btn btn-success text-white cancel-btn">Accept</button></td>
         </tr>
