@@ -4,25 +4,17 @@ import useAuth from '../../hooks/useAuth';
 import './MyOrder.css';
 const MyOrder = ({ order }) => {
     console.log(order);
-    const { serviceTitle, price, rating, imgUrl, description } = order;
+    const { serviceTitle, price, orderId, status } = order;
     return (
-        <Row className="justify-content-between">
-            <Col>
-                <div className="package-img">
-                    <img src={imgUrl} alt="" />
-                </div>
-            </Col>
-            <Col>
-                <div className="package-info">
-                    <h5>Product: {serviceTitle} {rating}*</h5>
-                    <h5>Price: ${price}</h5>
-                    <p>{description}</p>
-                </div>
-            </Col>
-            <Col>
-                <Button variant="danger">X</Button>
-            </Col>
-        </Row>
+        <tr>
+            <td className="primary-color fw-bold" data-label="Product ID">#{orderId}</td>
+            <td data-label="Product Name">{serviceTitle}</td>
+            <td data-label="Product Price">${price}</td>
+            {
+                status === "Pending" ? <td className="status" data-label="Status"><p className="primary-bg text-white">{status}</p></td> : <td className="status" data-label="Status">{status}<p className="bg-success text-white">{status}</p></td>
+            }
+            <td data-label="Action"><button className="btn primary-bg text-white cancel-btn">X</button></td>
+        </tr>
     );
 };
 

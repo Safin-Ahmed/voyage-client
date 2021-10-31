@@ -1,0 +1,9 @@
+td.status p {
+    max-width: fit-content;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin-bottom: 0;
+}
+tbody {
+    vertical-align: middle !important;
+}

@@ -12,7 +12,8 @@ const Order = () => {
     const onSubmit = data => {
         const { address, email, mobile, note, username } = data;
         const productId = id;
-        const doc = { username, email, address, mobile, note, productId };
+        const orderId = Math.floor(1000 + Math.random() * 9000);
+        const doc = { username, email, address, mobile, note, productId, serviceTitle, price, description, imgUrl, orderId, status: 'pending' };
         fetch('http://localhost:5000/orders', {
             method: 'POST',
             headers: {
