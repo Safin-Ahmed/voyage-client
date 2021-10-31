@@ -13,8 +13,8 @@ const Order = () => {
         const { address, email, mobile, note, username } = data;
         const productId = id;
         const orderId = Math.floor(1000 + Math.random() * 9000);
-        const doc = { username, email, address, mobile, note, productId, serviceTitle, price, description, imgUrl, orderId, status: 'pending' };
-        fetch('http://localhost:5000/orders', {
+        const doc = { username, email, address, mobile, note, productId, serviceTitle, price, description, imgUrl, orderId, status: 'Pending' };
+        fetch('https://agile-ravine-60330.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

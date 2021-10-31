@@ -8,7 +8,7 @@ const MyOrders = () => {
     const [orders, setOrders] = useState([]);
     const { user, isLoading, setIsLoading } = useAuth();
     useEffect(() => {
-        const url = `http://localhost:5000/myOrders?user=${user?.email}`
+        const url = `https://agile-ravine-60330.herokuapp.com/myOrders?user=${user?.email}`
         setIsLoading(true);
         fetch(url)
             .then(res => res.json())
@@ -42,7 +42,7 @@ const MyOrders = () => {
                     </thead>
                     <tbody>
                         {
-                            orders.map(order => <MyOrder key={order._id} order={order}></MyOrder>)
+                            orders.map(order => <MyOrder key={order._id} order={order} orders={orders} setOrders={setOrders}></MyOrder>)
                         }
                     </tbody>
                 </table>

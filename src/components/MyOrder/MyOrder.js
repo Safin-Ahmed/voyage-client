@@ -1,10 +1,25 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Col, Row, Button } from 'react-bootstrap';
 import useAuth from '../../hooks/useAuth';
 import './MyOrder.css';
-const MyOrder = ({ order }) => {
+const MyOrder = ({ order, orders, setOrders }) => {
     console.log(order);
     const { serviceTitle, price, orderId, status } = order;
+    const remainingOrder = orders.filter(ord => ord.orderId !== orderId);
+    const handleCancel = () => {
+        const confirmation = window.confirm('Are You Sure You Want To Cancel This Order?');
+        const url = `https://agile-ravine-60330.herokuapp.com/orders?id=${orderId}`;
+        if (confirmation) {
+            axios.delete(url)
+                .then(res => {
+                    if (res.data.deletedCount === 1) {
+                        alert('Deleted Successfully');
+                        setOrders(remainingOrder);
+                    }
+                })
+        }
+    }
     return (
         <tr>
             <td className="primary-color fw-bold" data-label="Product ID">#{orderId}</td>
@@ -13,7 +28,7 @@ const MyOrder = ({ order }) => {
             {
                 status === "Pending" ? <td className="status" data-label="Status"><p className="primary-bg text-white">{status}</p></td> : <td className="status" data-label="Status">{status}<p className="bg-success text-white">{status}</p></td>
             }
-            <td data-label="Action"><button className="btn primary-bg text-white cancel-btn">X</button></td>
+            <td data-label="Action"><button onClick={handleCancel} className="btn primary-bg text-white cancel-btn">X</button></td>
         </tr>
     );
 };

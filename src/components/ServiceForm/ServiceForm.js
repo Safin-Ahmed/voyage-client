@@ -14,7 +14,7 @@ const ServiceForm = () => {
             imgUrl,
             description
         }
-        axios.post('http://localhost:5000/packages', doc)
+        axios.post('https://agile-ravine-60330.herokuapp.com/packages', doc)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Package Added Successfully');
