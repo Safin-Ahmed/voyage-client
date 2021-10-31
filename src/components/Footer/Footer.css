@@ -47,3 +47,9 @@
     border-top: 1px solid #484848;
     padding-top: 20px;
 }
+
+@media screen and (max-width: 575px) {
+    .promotional-text p {
+        font-size: 18px;
+    }  
+}

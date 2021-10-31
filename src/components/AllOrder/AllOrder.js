@@ -47,7 +47,7 @@ const AllOrder = ({ order, orders, setOrders }) => {
             {
                 status === "Pending" ? <td className="status" data-label="Status"><p className="bg-primary text-white">{status}</p></td> : status === "Cancelled" ? <td className="status" data-label="Status"><p className="bg-secondary text-white">{status}</p></td> : <td className="status" data-label="Status"><p className="bg-success text-white">{status}</p></td>
             }
-            <td data-label="Action"><button onClick={handleDelete} className="btn btn-danger text-white cancel-btn me-3">Decline</button><button onClick={() => handleAccept('Approved')} className="btn btn-success text-white cancel-btn">Accept</button></td>
+            <td data-label="Action"><button onClick={handleDelete} className="btn btn-danger text-white cancel-btn me-3 mb-3 mb-sm-0">Decline</button><button onClick={() => handleAccept('Approved')} className="btn btn-success text-white cancel-btn">Accept</button></td>
         </tr>
     );
 };

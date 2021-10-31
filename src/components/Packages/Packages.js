@@ -6,9 +6,7 @@ import Package from '../Package/Package';
 import './Packages.css';
 const Packages = () => {
     const { packages } = usePackages();
-    const { isLoading } = useAuth();
     if (packages.length) {
-
         return (
             <div className="packages-section">
                 <Container>

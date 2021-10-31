@@ -35,7 +35,7 @@ const Order = () => {
     return (
         <div className="order-section">
             <Container>
-                <h2 className="mb-3">Checkout</h2>
+                <h2 className="mb-3 text-center text-sm-start">Checkout</h2>
                 <Row className="align-items-center">
                     <Col lg={8}>
                         <form onSubmit={handleSubmit(onSubmit)}>
@@ -48,7 +48,7 @@ const Order = () => {
                             <input type="submit" />
                         </form>
                     </Col>
-                    <Col lg={4}>
+                    <Col lg={4} className="d-none d-sm-block">
                         <div className="checkout-card text-center shadow shadow-lg">
                             <img src={imgUrl} alt="" />
                             <h5 className="mt-3">{serviceTitle}</h5>

@@ -2,3 +2,15 @@
     padding: 70px 0;
     padding-bottom: 0;
 }
+
+@media screen and (max-width: 575px) {
+    .packages-section {
+        padding: 50px 0;
+        padding-bottom: 0;
+    }
+    .packages-section h2 {
+        margin: 0;
+        margin-bottom: 30px !important;
+        padding-top: 0;
+    }
+}

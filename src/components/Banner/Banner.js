@@ -12,7 +12,7 @@ const Banner = () => {
                 />
                 <Carousel.Caption>
                     <h3>Adventure is Worthwhile with Friends!</h3>
-                    <p>Discover our brand new friend packages in special discount just for you and your friends!</p>
+                    <p className="d-none d-sm-block">Discover our brand new friend packages in special discount just for you and your friends!</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -24,7 +24,7 @@ const Banner = () => {
 
                 <Carousel.Caption>
                     <h3>Start Your New Journey with Your Loved One</h3>
-                    <p>Discover Our Brand New Romantic Tour Packages Customized Just For You In a Special Price</p>
+                    <p className="d-none d-sm-block">Discover Our Brand New Romantic Tour Packages Customized Just For You In a Special Price</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -36,7 +36,7 @@ const Banner = () => {
 
                 <Carousel.Caption>
                     <h3>Set Your Next Holiday In Paris With Your Family</h3>
-                    <p>Discover Our Brand New Packages for Family Trip with Your Family and Loved Ones</p>
+                    <p className="d-none d-sm-block">Discover Our Brand New Packages for Family Trip with Your Family and Loved Ones</p>
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>

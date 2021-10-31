@@ -37,3 +37,10 @@ span.price-number {
 .desc {
     padding: 0 30px;
 }
+
+@media screen and (max-width: 575px) {
+    .order-section form input, .order-section form textarea {
+        width: 85%;
+        margin: auto;
+    }
+}

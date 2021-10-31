@@ -11,6 +11,7 @@ import AuthProvider from './contexts/AuthProvider';
 import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 import MyOrders from './Pages/MyOrders/MyOrders';
 import ManageOrders from './Pages/ManageOrders/ManageOrders';
+import NotFound from './Pages/NotFound/NotFound';
 
 function App() {
   return (
@@ -35,6 +36,9 @@ function App() {
           </Route>
           <Route path="/manageOrders">
             <ManageOrders></ManageOrders>
+          </Route>
+          <Route path="*">
+            <NotFound></NotFound>
           </Route>
         </Switch>
         <Footer></Footer>

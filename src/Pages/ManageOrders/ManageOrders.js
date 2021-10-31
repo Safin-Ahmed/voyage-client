@@ -26,7 +26,7 @@ const ManageOrders = () => {
     }
     return (
         <div className="all-orders-section">
-            <Container>
+            <Container style={{ overflowX: 'auto' }}>
                 <h2 className="text-center mb-5">All Orders</h2>
                 <table className="table">
                     <thead>

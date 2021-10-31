@@ -28,7 +28,7 @@ const MyOrders = () => {
     }
     return (
         <div className="my-orders-section">
-            <Container>
+            <Container style={{ overflowX: 'auto' }}>
                 <h2 className="text-center mb-5">My Orders</h2>
                 <table className="table">
                     <thead>
