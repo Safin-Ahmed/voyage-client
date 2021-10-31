@@ -10,6 +10,7 @@ import Login from './Pages/Login/Login';
 import AuthProvider from './contexts/AuthProvider';
 import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 import MyOrders from './Pages/MyOrders/MyOrders';
+import ManageOrders from './Pages/ManageOrders/ManageOrders';
 
 function App() {
   return (
@@ -31,6 +32,9 @@ function App() {
           </Route>
           <Route path="/myOrder">
             <MyOrders></MyOrders>
+          </Route>
+          <Route path="/manageOrders">
+            <ManageOrders></ManageOrders>
           </Route>
         </Switch>
         <Footer></Footer>

@@ -26,9 +26,9 @@ const MyOrder = ({ order, orders, setOrders }) => {
             <td data-label="Product Name">{serviceTitle}</td>
             <td data-label="Product Price">${price}</td>
             {
-                status === "Pending" ? <td className="status" data-label="Status"><p className="primary-bg text-white">{status}</p></td> : <td className="status" data-label="Status">{status}<p className="bg-success text-white">{status}</p></td>
+                status === "Pending" ? <td className="status" data-label="Status"><p className="primary-bg text-white">{status}</p></td> : <td className="status" data-label="Status"><p className="bg-success text-white">{status}</p></td>
             }
-            <td data-label="Action"><button onClick={handleCancel} className="btn primary-bg text-white cancel-btn">X</button></td>
+            <td data-label="Action"><button onClick={handleCancel} className="btn primary-bg text-white cancel-btn">Cancel</button></td>
         </tr>
     );
 };
